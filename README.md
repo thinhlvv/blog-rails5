@@ -9,9 +9,9 @@
 
 Submitted by: **Le Vu Van Thinh**
 
-Time spent: **2** hours spent in total
+Time spent: **4** hours spent in total
 
-URL: **Insert your Heroku URL here**
+URL: **https://powerful-waters-40296.herokuapp.com/articles?utf8=%E2%9C%93&search=&commit=Search**
 
 ## User Stories
 
@@ -43,7 +43,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 > HINT: You can put a `walkthrough.gif` file in your project folder, add to git, and use the following syntax to embed it:  
-> `![Video Walkthrough](walkthrough.gif)`
+> `![Video Walkthrough](http://i.imgur.com/cRXujfX.gifv)`
 >
 
 ![Video Walkthrough](/path/to/your/gif/file)

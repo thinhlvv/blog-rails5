@@ -3091,3 +3091,24 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/articles?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at 2017-02-09 01:58:04 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Search"}
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_search_filters.html.erb (4.4ms)
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title ILIKE '%%')[0m
+  Rendered articles/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 330ms (Views: 311.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=&commit=Search" for 127.0.0.1 at 2017-02-09 01:58:06 +0700
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Search"}
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_search_filters.html.erb (0.5ms)
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (title ILIKE '%%')[0m
+  Rendered articles/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
