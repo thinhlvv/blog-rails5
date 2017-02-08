@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.search(params[:search])
+    # @articles = Article.all
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
@@ -60,6 +61,12 @@ class ArticlesController < ApplicationController
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  # GET /articles/search_title
+  # GET /articles/search_title.json
+  def search
+    @articles = Article.find_by_title(params[:title])
   end
 
   private
