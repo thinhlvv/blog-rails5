@@ -1,20 +1,42 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91845709-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<p id="notice"><%= notice %></p>
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <%= link_to "Thinh's Blog", articles_path , class:"navbar-brand" %>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item active">
+      <%= link_to 'New Article +', new_article_path, class:"bg-primary" ,class:"btn btn-primary" %>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <%= render "search_filters", search: @articles, class:"form-control mr-sm-2" %>
+    </form>
+  </div>
+</nav>
+
 <div class="container">
 
 <p id="notice"><%= notice %></p>
 
 <h1 class="text-center">Thinh's Blog</h1>
 <h3 class="text-center"> My first application with Rails 5 for coderschool </h3>
-
-<div class="row">
-  <div class="col-sm-4">
-    <%= link_to 'New Article +', new_article_path, class:"bg-primary" ,class:"btn btn-primary" %>
-  </div>
-  <div align="right" class="col-sm-4">
-  </div>
-  <div align="right" class="col-sm-4">
-    <%= render "search_filters", search: @articles %>
-  </div>
-</div>
 
 <center>
 <div class="text-center row">
