@@ -1,15 +1,24 @@
 <div class="container">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Thinh's Blog</h1>
-<h3> My first application with Rails 5 for coderschool </h3>
-
-<div>
-<%= render "search_filters", search: @articles %>
-</div>
+<h1 class="text-center">Thinh's Blog</h1>
+<h3 class="text-center"> My first application with Rails 5 for coderschool </h3>
 
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-sm-4">
+    <%= link_to 'New Article +', new_article_path, class:"bg-primary" ,class:"btn btn-primary" %>
+  </div>
+  <div align="right" class="col-sm-4">
+  </div>
+  <div align="right" class="col-sm-4">
+    <%= render "search_filters", search: @articles %>
+  </div>
+</div>
+
+<center>
+<div class="text-center row">
+  <div class="col-sm-8 col-centered">
     <% @articles.each do |article| %>
       <div class="card" style="width: 20rem;">
         <div class="card-block">
@@ -24,8 +33,7 @@
     <% end %>
   </div>
 </div>
-
+</center>
 <br>
 
-<%= link_to 'New Article', new_article_path %>
 </div>

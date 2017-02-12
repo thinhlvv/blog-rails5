@@ -11,17 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+  <div class="row">
+    <div class="col-md-1">
+      
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_field :body %>
-  </div>
+      <div class="field">
+        <%= f.label :body %>
+        <%= f.text_field :body %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit %>
+      <div class="action">
+        <%= f.submit "Submit", class:"btn btn-warning" %>
+      </div>
+
+    </div>
   </div>
 <% end %>

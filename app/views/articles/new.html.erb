@@ -1,5 +1,10 @@
+<div class="container">
 <h1>New Article</h1>
 
-<%= render 'form', article: @article %>
-
+<div class="row">
+  <div class="col-sm-8">
+      <%= render 'form', article: @article %>
+  </div>
+</div>
 <%= link_to 'Back', articles_path %>
+</div>
